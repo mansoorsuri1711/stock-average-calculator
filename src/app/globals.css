@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 232, 238, 248;
+  --background-start-rgb: 10, 16, 32;
+  --background-end-rgb: 6, 10, 20;
+  --accent: #22c55e;
+  --brand: #0a1020;
+  --pink: #22c55e;
+  --violet: #22c55e;
+  --mint: #86efac;
+  --gold: #f0b030;
+  --forest: #15803d;
+  color-scheme: dark;
+  background-color: #0a1020;
+}
+
+html {
+  background-color: #0a1020;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: #0a1020;
+  background: #0a1020;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  contain: layout;
+}
+
+.download-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+}
+
+.download-btn:hover .download-icon {
+  animation: bounce 0.5s ease infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes float-glow {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate3d(0, -10px, 0);
+    opacity: 0.8;
+  }
+}
+
+.site-atmosphere {
+  background-color: #0a1020;
+  background-image:
+    radial-gradient(ellipse 90% 60% at 12% -10%, rgba(34, 197, 94, 0.14), transparent 55%),
+    radial-gradient(ellipse 80% 50% at 90% 0%, rgba(16, 24, 64, 0.45), transparent 52%),
+    radial-gradient(ellipse 70% 45% at 50% 110%, rgba(240, 176, 48, 0.06), transparent 55%),
+    linear-gradient(180deg, #121a2e 0%, #0a1020 40%, #060a14 100%);
+}
+
+.hero-glow {
+  animation: float-glow 8s ease-in-out infinite;
+}
+
+.brand-gradient-text {
+  background: linear-gradient(120deg, #86efac 0%, #22c55e 45%, #f0b030 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+a {
+  color: inherit;
+}
+
+.calc-input {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #0c1428;
+  padding: 0.625rem 0.75rem;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.calc-input:focus {
+  border-color: rgba(18, 168, 118, 0.65);
+  box-shadow: 0 0 0 1px rgba(18, 168, 118, 0.35);
+}
+
+.calc-label {
+  display: block;
+  margin-bottom: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Stock Average Calculator",
+  "short_name": "Stock Avg",
+  "icons": [
+    {"src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png"}
+  ],
+  "theme_color": "#22C55E",
+  "background_color": "#0A1020",
+  "display": "standalone"
+}
